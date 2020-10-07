@@ -12,7 +12,11 @@ I am merging pull requests very often .
 ## Procedure to be followed:
 
 Fork this repository .
+
 Add codes in respective folders , with small explanation .
+
 Create folders if necessary .
+
 Create a Pull Request .
+
 And Bam!!! I will merge it

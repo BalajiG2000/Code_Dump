@@ -41,7 +41,17 @@ scanf("%d",&a[i]);
 printf("The original array is : \n");
 printArray(a,n);
 bubbleSort(a,n);
+/*for(i=0;i<n-1;i++)
+{
 
+for(j=0;j<n-i-1;j++)
+    {
+
+if(a[j]>a[j+1])
+swap(&a[j],&a[j+1]);
+        }
+    }
+*/
 printf("The sorted array is :\n ");
 printArray(a,n);
 return 0;

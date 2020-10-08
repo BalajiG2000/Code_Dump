@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janken!</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b2e3d96ec6.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Janken!</h1>
+    <div class="container">
+        <div class="comp-area">
+            <i class="fas fa-hand-rock rocke"></i>
+        </div>
+        <div class="result"></div>
+        <div class="menus">
+            <span class="fas fa-redo-alt" id="repeat"></span>
+            <div class="divider"></div>
+            <div id="score-comp">0</div>
+            <div class="divider"></div>
+            <div id="score-player">0</div>
+            <div class="divider"></div>
+            <span class="fas fa-moon" id="dark"></span>
+            <!-- <span class="fas fa-sun" id="light"></span> -->
+        </div>
+        <div class="player-area">
+            <div class="con-area">
+                <i class="fas fa-hand-rock" id="jan"></i>
+                <i class="fas fa-hand-scissors" id="ken"></i>
+                <i class="fas fa-hand-paper" id="pon"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

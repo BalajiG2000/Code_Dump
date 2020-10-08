@@ -3,6 +3,8 @@ This repository is to help beginners learn Open source contributions . This repo
 
 # Instructions
 
+Check whether the algorithm or code , you are contributing is already available in this Repository or not.
+
 Add small explanation of the program .
 
 If the program is a Competitive question solution , include the question link as a comment.

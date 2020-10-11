@@ -1,0 +1,21 @@
+t = int(input())
+for _ in range(t):
+    n, k = input().split()
+    n = int(n)
+    k = int(k)
+    arr = list(map(int, input().split()))
+    mini = 2147483647
+    c = 0
+    for i in range(n):
+        if arr[i] > k:
+            continue
+        elif arr[i] <= k:
+            if k % arr[i] == 0 :
+                c = k // arr[i]
+                if c < mini:
+                    mini = c
+                    ans = arr[i]
+    if mini == 2147483647:
+        print(-1)
+    else:
+        print(ans)

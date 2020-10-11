@@ -1,0 +1,21 @@
+t = int(input())
+for _ in range(t):
+    pc, pr = input().split()
+    pc = int(pc)
+    pr = int(pr)
+    c = pc // 9
+    r = pr // 9
+    x = c
+    y = r
+    if pc % 9 != 0:
+        x += 1
+    if pr % 9 != 0:
+        y += 1
+    if c == r:
+        print(1, y)
+    else:
+        if c < r:
+            print(0, x)
+        else:
+            print(1, y)
+https://www.codechef.com/AUG20B/problems/CRDGAME3

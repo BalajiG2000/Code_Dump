@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+bool ispower2(int n){
+    if(n==0){
+        return 0;
+    }
+    while(n!=1){
+        if(n%2!=0){
+            return 0;
+        }
+        n = n/2;
+    }
+    return 1;
+}
+
+int main() {
+	// your code goes here
+	int t = 0;
+	cin >> t;
+	int arr[t];
+	for(int i = 0; i < t; i++){
+	    cin >> arr[i];
+	}
+	for(int i = 0; i < t; i++){
+	    if(ispower2(arr[i])){
+	        if(arr[i] == 1){
+	            cout << 1;
+	        }
+	        else{
+	            cout << -1;
+	        }
+	    }
+	    else{
+	        int p[100005];
+	        p[0] = 2; 
+	        p[1] = 3; 
+	        p[2] = 1; 
+	        int sum = 6;
+	        for(int j = 3; j < arr[i]; j++){
+	            p[j] = j+1;
+	            sum += p[j];
+	        }
+	        for(int j = 3; j < arr[i]; j++){
+	            if(ispower2(j+1)){
+	                int t = p[j];
+	                p[j] = p[j+1];
+	                p[j+1] = t;
+	            }
+	        }
+	        for(int a = 0; a < arr[i]; a++){
+	            cout << p[a] << " ";
+	        }
+	    }
+	    cout << endl;
+	}
+	return 0;
+}

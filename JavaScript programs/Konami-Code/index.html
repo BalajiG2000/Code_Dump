@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konami Code</title>
+  <style>
+    div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      height: 50%;
+      padding: 20px;
+
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    Press the Konami Code Ans See What Happens!
+
+    <div>
+      Up Up Down Down Left Right Left Right B A
+    </div>
+  </div>
+
+  <script>
+    let KonamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft',
+      'ArrowRight', 'b', 'a'
+    ];
+    var myAudio = new Audio('./Konami Intro - Metal Gear Solid ᴴᴰ.mp3');
+
+
+
+    const detectCode = (code) => {
+      let input = ''
+      let codeToDetect = code.join('')
+      // detect key events
+      document.addEventListener('keydown', e => {
+
+        //add events to input
+        input += ('' + e.key)
+        if (input === codeToDetect) {
+          myAudio.play()
+        }
+        // reset the code
+        if (!codeToDetect.indexOf(input)) return;
+        input = ('' + e.key)
+      })
+    }
+
+    detectCode(KonamiCode)
+  </script>
+</body>
+
+</html>

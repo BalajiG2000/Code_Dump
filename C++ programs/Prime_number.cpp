@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cmath>
 using namespace std;
 
 int main() {
@@ -13,7 +14,7 @@ int main() {
         isPrime = false;
     }
     else {
-        for (divisor = 2; divisor <= number_entered / 2; ++divisor) {
+        for (divisor = 2; divisor <= floor(sqrt(number_entered)); ++divisor) { //used the sqrt() method to reduce the iterations
             if (number_entered % divisor == 0) {
                 isPrime = false;
                 break;

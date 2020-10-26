@@ -1,24 +1,22 @@
 # Contribute_anything
-This repository is to help beginners learn Open source contributions . This repository is created with respect to HACKTOBERFEST 2020 .
+This repository is to help beginners learn how to make open source contributions. This repository is created with respect to HACKTOBERFEST 2020 :octocat:
 
 # Instructions
 
-Check whether the algorithm or code , you are contributing is already available in this Repository or not.
+Please make sure whether the algorithm or code you are contributing is already available in this Repository or not.
 
-Add small explanation of the program .
+If the program is a competitive question solution, include the question link as a comment.
 
-If the program is a Competitive question solution , include the question link as a comment.
-
-I am merging pull requests very often .
+I am merging pull requests very often.
 
 ## Procedure to be followed:
 
-Fork this repository .
+### Step 1: Fork this repository.
 
-Add codes in respective folders , with small explanation .
+### Step 2: Add your code in its respective folders with a small explanation. Create new folders if necessary.
 
-Create folders if necessary .
+### Step 3: Create a Pull Request.
 
-Create a Pull Request .
+### Step 4: And Bam!!! I will merge it
 
-And Bam!!! I will merge it
+Happy Contributing!

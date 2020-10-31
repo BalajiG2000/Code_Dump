@@ -1,0 +1,12 @@
+public class lower_ascii
+{
+    public static void main(String[]args)
+    {
+        char ch;
+        System.out.println("lower alphabets are:");
+        for(ch=97;ch<=122;ch++)
+        {
+            System.out.print(ch+" ");
+        }
+    }
+}

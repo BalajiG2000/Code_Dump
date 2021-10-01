@@ -1,0 +1,11 @@
+#python file for finding the word count in a file
+
+file=input("Enter the file name: ")
+lines=open(file) #opening the file
+g=dict() #creating a dictionary
+for line in lines :
+    line.rstrip() # to remove the escape sequences
+    words=line.split()
+    for word in words :
+        g[word]=g.get(word,0)+1
+print(g)

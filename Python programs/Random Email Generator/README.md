@@ -22,5 +22,3 @@ This is a Python Script which generates random email addresses with domains base
 ``` 
 $ python random_email_generator.py
 ```
-## Output 
-![output](Images/RandomEmail.png)

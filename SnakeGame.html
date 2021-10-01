@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        table.chess, .chess tr,.chess td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+        td {
+            height: 10px;
+            width: 10px;
+        }
+        .snake {
+            background-color: black;
+            border: 1px solid black !important;
+        }
+        .food {
+            background-color: lime;
+        }
+        button {
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        <b>HiScore: </b><span id="hiscore"></span><br/>
+        <b>Score: </b><span id="score"></span>
+    </h1>
+
+
+    <table class="chess">
+        <script type="text/javascript">
+            var height = 20;
+            var width = 20;
+            for (var i=0; i < height; i++) {
+                document.write(`<tr>`)
+                for (var j=0; j < width; j++) {
+                    document.write(`<td class="cell" id="${i}-${j}"></td>`);
+                }
+                document.write(`</tr>`);
+            }
+        </script>
+    </table>
+
+    <table>
+        <tr>
+            <td></td>
+            <td><button onclick="changeMove(-1,0)">UP</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="changeMove(0,-1)">LEFT</button></td>
+            <td><button onclick="changeMove(1,0)">DOWN</button></td>
+            <td><button onclick="changeMove(0,1)">RIGHT</button></td>
+        </tr>
+    </table>
+        <span id="help">Press any key to start...</span>
+
+    <script>
+
+        var initial_loc// = [[8,2],[8,3],[8,4]];
+        var move// = [0, 1];
+        var food// = [null, null];
+        var score// = 0;
+        var hiscore = 0;
+        var speed// = 150;
+        var canmove// = true;
+        var playing// = false;
+        function changeMove(h, w)
+        {
+
+            go();
+
+            if (!canmove) return;
+
+            canmove = false;
+
+            if (h == 1 && move[0] == -1) return;
+            if (h == -1 && move[0] == 1) return;
+            if (w == 1 && move[1] == -1) return;
+            if (w == -1 && move[1] == 1) return;
+            move[0] = h;
+            move[1] = w;
+        }
+
+        function clearBoard()
+        {
+            for (var h=0; h<height;h++)
+            {
+                for (var w=0; w<width;w++)
+                {
+                    document.getElementById(h+'-'+w).className = "cell";      
+                }
+            }
+        }
+
+        function placeSnake()
+        {
+            for (var i = 0; i < initial_loc.length; i++)
+            {
+                var cell = document.getElementById(initial_loc[i][0]+'-'+initial_loc[i][1]);
+                cell.className = "snake";
+            }
+        }
+
+        function placeFood()
+        {
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("hiscore").innerHTML = hiscore;
+            food = [
+                Math.floor(Math.random() * height),
+                Math.floor(Math.random() * width)
+            ];
+            if (initial_loc.some(loc=>(loc[0]==food[0] && loc[1]==food[1]))) {
+                placeFood();
+            }
+
+            var cell = document.getElementById(food[0]+'-'+food[1]);
+            cell.className = "food";
+        }
+
+        function start()
+        {
+            var cell = document.getElementById(initial_loc[0][0]+'-'+initial_loc[0][1]);
+            cell.className = "cell";
+
+            var x = initial_loc.shift();
+            var i = initial_loc.length-1;
+            var next_move = [
+
+                initial_loc[i][0]+move[0],
+                initial_loc[i][1]+move[1]
+            ];
+
+            if (next_move[0] == height) {
+                next_move[0] = 0;
+            } else if (next_move[0] == -1) {
+                next_move[0] = height-1;
+            } else if (next_move[1] == width) {
+                next_move[1] = 0;
+            } else if (next_move[1] == -1) {
+                next_move[1] = width-1;
+            }
+            
+            if (initial_loc.some(loc=>(loc[0]==next_move[0] && loc[1]==next_move[1]))) {
+                gameOver();
+                return;
+            }
+
+            initial_loc.push(next_move);
+
+            if (next_move[0] == food[0] && next_move[1] == food[1]) {
+               initial_loc.unshift(x);
+               score++;
+               placeFood();
+            }
+
+
+
+            placeSnake();  
+            canmove = true;     
+            if (playing) 
+                setTimeout(start, speed-(score*1.75));
+        }
+
+        function gameOver()
+        {
+            alert("Game Over");
+            playing = false;
+            init();
+        }
+
+        function go()
+        {
+            if (!playing) {
+                playing = true;
+                start();
+                placeFood();
+                document.getElementById("help").style.display="none";
+            }                        
+        }
+
+        document.body.onkeypress = (key) => {
+                
+            go();
+
+            if (key.keyCode != 0){
+                switch (key.keyCode) {
+                    case 37: changeMove(0,-1); break;
+                    case 38: changeMove(-1,0); break;
+                    case 39: changeMove(0,1); break;
+                    case 40: changeMove(1,0); break;
+                }
+            }else{
+                switch(key.key) {
+                    case 'a': changeMove(0,-1); break;
+                    case 'w': changeMove(-1,0); break;
+                    case 'd': changeMove(0,1); break;
+                    case 's': changeMove(1,0); break;
+                }
+            }
+
+        }
+
+        function init () {
+                if (score > hiscore){
+                    hiscore = score;
+                    alert("New High Score")
+                }
+                initial_loc = [[8,2],[8,3],[8,4]];
+                move = [0, 1];
+                food = [null, null];
+                score = 0;
+                speed = 150;
+                canmove = true;
+                clearBoard();
+                placeSnake();
+                document.getElementById("help").style.display="block"       
+        }
+
+        init();
+    </script>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ int main() {
     }
         
     else
-        printf("The given sides can not form a traingle \n");
+        printf("The given sides can not form a traingle as sum of 2 sides of a triangle must be greater than 3rd side \n");
 
     return 0;
 }

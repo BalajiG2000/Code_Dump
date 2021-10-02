@@ -1,3 +1,10 @@
+// Equal Sum Partition
+// Input :
+// 4
+// 1 5 11 5
+// Output :
+// true
+
 #include<iostream>
 using namespace std;
 bool subset_sum(int arr[],int sum,int n)
@@ -25,24 +32,26 @@ bool subset_sum(int arr[],int sum,int n)
     }
     return t[n][sum];
 }
+
 int main()
 {
-    int arr[]={1,3,5,9};
+    int n; cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)    cin>>arr[i];
     int s=0;
-    int n=sizeof(arr)/sizeof(arr[0]);
     for(int i=0;i<n;i++)
     {
         s=s+arr[i];
     }
     if(s%2!=0)
-    std::cout << "false" << std::endl;
+        std::cout << "false" << std::endl;
     else
-   { int flag=subset_sum(arr,s/2,n);
-    if(flag)
-    cout<<"true"<<endl;
-    else
-    cout<<"no"<<endl;
-       
-   }
-    
+    { 
+        int flag=subset_sum(arr,s/2,n);
+        if(flag)
+            cout<<"true"<<endl;
+        else
+            cout<<"no"<<endl;
+    }
+   return 0;
 }

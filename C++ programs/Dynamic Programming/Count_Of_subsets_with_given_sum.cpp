@@ -1,3 +1,11 @@
+// Count of subsets with the given sum
+// Input : 
+// 6
+// 2 3 5 6 8 10
+// 10
+// Output :
+// 3
+
 #include<iostream>
 using namespace std;
 int subset_sum(int arr[],int sum,int n)
@@ -27,10 +35,13 @@ int subset_sum(int arr[],int sum,int n)
 }
 int main()
 {
-    int arr[]={2,3,5,6,8,10};
-    int s=10;
-    int n=sizeof(arr)/sizeof(arr[0]);
-    cout<<subset_sum(arr,s,n);
+    // Input the array
+    int n; cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++)  cin>> arr[i];
+    // Input the sum
+    int sum; cin >> sum;
+    cout<<subset_sum(arr,sum,n);
 }
     
     

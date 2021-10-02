@@ -1,3 +1,12 @@
+// Longest Palindromic Subsequence'
+// Input :
+// agbcba
+// Output :
+// 5
+
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     // Bottom-up approach
@@ -39,3 +48,12 @@ public:
         }
         return dp[0][N-1];
     }
+};
+
+int main() {
+    Solution s;
+    // Input the string
+    string str;
+    cin >> str;
+    cout << s.longestPalindromeSubseqTabular(str);
+}

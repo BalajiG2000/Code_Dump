@@ -1,5 +1,14 @@
+// No of Subsets with given diff
+// Input :
+// 4
+// 1 1 2 3
+// 1
+// Output :
+// 3
+
 #include <iostream>
-using namespace std;                                 //TARGET SUM IS SAME AS THIS
+using namespace std;                                 
+//TARGET SUM IS SAME AS THIS
 class starry
 {
     public:
@@ -34,9 +43,12 @@ class starry
 int main()
 {
     starry ob;
-    int arr[]={1,1,2,3};
-    int diff=1;
-    int n=sizeof(arr)/sizeof(arr[0]);
+    // Input the array
+    int n; cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++)  cin >> arr[i];
+    // Input diff you want to get
+    int diff;   cin >> diff;
     int total_sum=0,sum;
     for(int i=0;i<n;i++)
     {

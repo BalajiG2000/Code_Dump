@@ -1,7 +1,10 @@
-#include<iostream>
+// Minimum Subset Sum Difference
+// Input :
+// 1 6 11 5
+// Output :
+// 1
+
 #include <bits/stdc++.h>
- 
-#include<vector> 
 using namespace std;
 class Solution {
 public:

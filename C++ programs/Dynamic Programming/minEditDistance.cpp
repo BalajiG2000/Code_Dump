@@ -1,9 +1,15 @@
-#include<iostream.h>
-#include<bits/stdc++.h>
+// Min Edit Distance
+// Input :
+// my name is ishika
+// my is ish
+// Output :
+// 8
+
+#include <bits/stdc++.h>
 using namespace std;
+
 int minDistance(string word1, string word2) {
     vector<vector<int>> dp(word1.size()+1, vector<int>(word2.size()+1,0));
-
     for(int i=0;i<=word1.size();i++){
         for(int j=0;j<=word2.size();j++){
             if(i==0){
@@ -20,10 +26,9 @@ int minDistance(string word1, string word2) {
             }
         }
     }
-
     return dp[word1.size()][word2.size()];
 }
 
 int main(){
-  cout<<minDistance("my name is ishika", "my is ish");
+    cout<<minDistance("my name is ishika", "my is ish");
 }

@@ -1,10 +1,16 @@
+// Subset Sum
+// Input :
+// 5 11
+// 2 3 7 8 10
+// Output :
+// yes
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
     int n,sum;
-    
     cin>>n>>sum;
     int arr[n];
     bool t[n+1][sum+1];
@@ -33,8 +39,8 @@ int main()
         }
     }
     if(t[n][sum])
-     cout<<"yes";
-     else
-     cout<<"no";
+        cout<<"yes";
+    else
+        cout<<"no";
 }
 

@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+
+char Toggle_Move(char *s)
+{
+
+  for(int i=0;i<strlen(s);i++)
+  {
+    if(s[i]>=97 && s[i]<=122)
+    {
+      s[i]=s[i]-32;
+    }
+    else if(s[i]>=65 && s[i]<=90)
+    {
+      s[i]=s[i]+32;
+    }
+  }
+  
+}
+
+int main()
+{
+  char s[1000];
+    scanf("%s",s);
+
+    Toggle_Move(s);
+    printf("%s",s);
+  return 0;
+}

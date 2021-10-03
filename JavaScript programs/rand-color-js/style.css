@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+p{
+    font-size: 2em;
+  
+}
+
+a{
+    margin-top: 20px;
+    border: 1px solid black;
+    transition: all 0.1s linear;
+    padding: 10px;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    user-select: none;
+}
+
+a:hover{
+    transform: scale(0.9);
+    background-color: white;
+    color: black;
+
+}

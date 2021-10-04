@@ -1,0 +1,89 @@
+*{
+margin:0;
+padding:0;
+}
+body{
+background-image:url(google.jpg);
+background-repeat:no-repeat;
+background-size:100% 950px;
+}
+h3
+{
+	text-align:center;
+	color:red;
+}
+.reg
+{
+	width:30%;
+	margin:auto;
+	border:2px solid red;
+	border-radius:5px;
+ padding:25px;
+ background-color:rgba(0.25,0,0,0.25);
+    font-family: 'Ubuntu', sans-serif;
+}
+#name
+{
+	width:300px;
+	padding:5px;
+	border:none;
+	border-bottom:2px solid red;
+	background:none;
+	outline:0;
+}
+#code
+{
+	padding:3px;
+	border:none;
+	border-bottom:2px solid red;
+	background:none;
+	color:red;
+}
+#mnum
+{
+	padding:3px;
+	border:none;
+	border-bottom:2px solid red;
+	background:none;
+	outline:0;
+	width:250px;
+}
+#male
+{
+	color:red;
+	font-size:18px;
+}
+#msg
+{
+	outline:0;
+	padding:3px;
+	border:1px solid red;
+	border-bottom:2px solid red;
+	background:none;
+	border-radius:5px;
+}
+#sub
+{
+padding:10px;
+	border:none;
+	border-bottom:2px solid red;
+	background:red;
+	outline:0;
+	width:150px;	
+	border-radius:5px;
+	font-size:16px;
+	color:red;
+}
+.btn{
+  background: #0000ff;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.btn a{
+  color: #fff;
+  letter-spacing: 5px;
+  display: block;
+}

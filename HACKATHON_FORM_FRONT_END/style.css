@@ -1,0 +1,40 @@
+*{
+padding:0;
+margin:0;
+}
+body
+{
+width:100%;
+height:auto;
+overflow:hidden;
+background-color:#ffffff;
+}
+.content-wrapper
+{
+width:80%;
+margin:4% 10% 5% 10%;
+}
+.content-wrapper img{
+width:100%;
+
+}
+.text-wrapper
+{
+width:100%;
+position:relative;
+margin-top:-60%;
+}
+.text-wrapper h1
+{
+text-align:center;
+color:#8B0000;
+font-size:3vw;
+font-family:'lobster',cursive;
+}
+.text-wrapper h4
+{
+text-align:left;
+color:#FF0000;
+font-size:1vw;
+font-family:'lobster',cursive;
+}

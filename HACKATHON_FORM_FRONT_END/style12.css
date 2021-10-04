@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+body
+{
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	background:#000;
+	font-family:'Bad Script', cursive;
+}
+h4
+{
+	margin:0;
+	padding:0;
+	color:#111;
+	font-size:6em;
+}
+h4 span
+{
+	display:table-cell;
+	margin:0;
+	padding:0;
+	animation:animate 2s linear infinite;
+}
+h4 span:nth-child(1)
+{
+	animation-delay:0s;
+}
+h4 span:nth-child(2)
+{
+	animation-delay:0.25s;
+}
+h4 span:nth-child(3)
+{
+	animation-delay:0.5s;
+}
+h4 span:nth-child(4)
+{
+	animation-delay:0.75s;
+}
+h4 span:nth-child(5)
+{
+	animation-delay:1s;
+}
+h4 span:nth-child(6)
+{
+	animation-delay:1.25s;
+}
+h4 span:nth-child(7)
+{
+	animation-delay:1.5s;
+}
+h4 span:nth-child(8)
+{
+	animation-delay:1.75s;
+}
+h4 span:nth-child(9)
+{
+	animation-delay:2s;
+}
+h4 span:nth-child(10)
+{
+	animation-delay:2.25s;
+}
+h6
+{
+	margin:1;
+	padding:1;
+	color:#111;
+	font-size:2em;
+}
+h6 span
+{
+	display:table-cell;
+	margin:1;
+	padding:1;
+	animation:animate 2s linear infinite;
+}
+h6 span:nth-child(1)
+{
+	animation-delay:0s;
+}
+h6 span:nth-child(2)
+{
+	animation-delay:0.25s;
+}
+h6 span:nth-child(3)
+{
+	animation-delay:0.5s;
+}
+h6 span:nth-child(4)
+{
+	animation-delay:0.75s;
+}
+h6 span:nth-child(5)
+{
+	animation-delay:1s;
+}
+h6 span:nth-child(6)
+{
+	animation-delay:1.25s;
+}
+h6 span:nth-child(7)
+{
+	animation-delay:1.5s;
+}
+h6 span:nth-child(8)
+{
+	animation-delay:1.75s;
+}
+h6 span:nth-child(9)
+{
+	animation-delay:2s;
+}
+h5
+{
+	margin:0;
+	padding:0;
+	color:#111;
+	font-size:1em;
+}
+h5 span
+{
+	
+	margin:0;
+	padding:0;
+	animation:animate 2s linear infinite;
+}
+h5 span:nth-child(1)
+{
+	animation-delay:0s;
+}
+h5 span:nth-child(2)
+{
+	animation-delay:0.25s;
+}
+h5 span:nth-child(3)
+{
+	animation-delay:0.5s;
+}
+h5 span:nth-child(4)
+{
+	animation-delay:0.75s;
+}
+h5 span:nth-child(5)
+{
+	animation-delay:1s;
+}
+h5 span:nth-child(6)
+{
+	animation-delay:1.25s;
+}
+h5 span:nth-child(7)
+{
+	animation-delay:1.5s;
+}
+h5 span:nth-child(8)
+{
+	animation-delay:1.75s;
+}
+h5 span:nth-child(9)
+{
+	animation-delay:2s;
+}
+h5 span:nth-child(10)
+{
+	animation-delay:2.25s;
+}
+h5 span:nth-child(11)
+{
+	animation-delay:2.5s;
+}
+@keyframes animate
+{
+	0%,100%
+	{
+		color:#fff;
+		filter:blur(2px);
+		box-shadow:0 0 10px #00b3ff,
+		0 0 20px #00b3ff,
+		0 0 40px #00b3ff,
+		0 0 80px #00b3ff,
+		0 0 120px #00b3ff,
+		0 0 200px #00b3ff,
+		0 0 400px #00b3ff;
+	}
+5%,95%
+	{
+		color:#111;
+		filter:blur(0px);
+		text-shadow:none;
+	}
+}

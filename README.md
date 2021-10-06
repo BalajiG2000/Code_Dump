@@ -1,5 +1,4 @@
-# Contribute_anything
-This repository is to help beginners learn how to make open source contributions. This repository is created with respect to HACKTOBERFEST 2021 :octocat:
+
 
 ### Instructions
 

@@ -14,3 +14,4 @@ int main(){
 	}
 }
 //https://www.codechef.com/CUPP2101/problems/GDOG
+

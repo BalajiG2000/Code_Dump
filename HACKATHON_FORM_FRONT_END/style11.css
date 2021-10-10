@@ -1,12 +1,22 @@
-*{padding:0;
-margin:0;
-box-sizing:border-box;
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
 }
-body{font-family:arial;font-size:14px;background-color:#f5f5f5;}
- a,li{display:nline-block;} 
- header{
+
+body{
+	font-family:arial;
+	font-size:14px;
+	background-color:#f5f5f5;
+}
+
+a,li{
+	display: inline-block;
+} 
+
+header{
 	width:100%;
-float:left;
-height: 63px;
-background:#5303bc; 
+	float:left;
+	height: 63px;
+	background:#5303bc; 
  }

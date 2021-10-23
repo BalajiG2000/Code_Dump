@@ -1,0 +1,149 @@
+@font-face {
+    font-family: myfont;
+    src: url(fonts/3Dumb.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: url(images/quizbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+img {
+    width: 7.7rem;
+    height: 7.2rem;
+    border-radius: 50%;
+}
+
+.img {
+    position: fixed;
+}
+
+#title {
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 3rem;
+    color: white;
+    font-family: 'myfont';
+}
+
+.questions {
+    margin: 3rem auto;
+    width: 90vw;
+    padding: 2rem;
+    background: rgba(230, 230, 250, 0.45);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#question {
+    margin-bottom: 1rem;
+    color: whitesmoke;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.option {
+    margin-bottom: 0.5rem;
+    padding: 3px;
+    font-size: 1.2rem;
+    border-bottom: solid 0.2rem rgb(73, 174, 214);
+    width: 17rem;
+    background: lightblue;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.option:hover {
+    color:black;
+    
+}
+
+.option:active{
+    color: cadetblue;
+}
+
+ol {
+    position: relative;
+    padding: 0 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+span {
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 1rem;
+}
+
+#answer {
+    margin-top: 2.5rem;
+}
+
+#stat {
+    margin-top: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 0.2rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-family: 'myfont';
+    font-weight: 600;
+    background: rgb(90, 186, 224);
+    cursor: pointer;
+}
+
+button:active {
+    background: rgb(219, 219, 245);
+    color: cadetblue;
+}
+
+#scoreboard, #answerBank {
+    width: 20rem;
+    background: rgba(230, 230, 250, 0.77);
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    display: none;
+}
+
+#score-title {
+    margin: 1rem 0;
+}
+
+#score-btn, #check-answer {
+    margin-top: 1rem;
+}
+
+#score {
+    font-size: 2.5rem;
+}
+
+#answerBank li {
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
+
+#answers {
+    margin-top: 1rem;
+}
